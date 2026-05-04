@@ -24,6 +24,7 @@ public class MessegeServlet extends HttpServlet
             {
                 res.setContentType("text/html");
                 HTMLWriter.writeHTML(PageType.MAIL, res.getWriter());
+                res.setStatus(HttpServletResponse.SC_OK);
                 return;
             }
 
@@ -34,6 +35,7 @@ public class MessegeServlet extends HttpServlet
             String jsonResponse = objMap.writeValueAsString(messages);
             res.setContentType("application/json");
             res.getWriter().write(jsonResponse);
+            res.setStatus(HttpServletResponse.SC_OK);
         }
         catch (DatabindException e) {throw new RuntimeException(e);}
         catch (StreamWriteException e) {throw new RuntimeException(e);}
@@ -49,6 +51,7 @@ public class MessegeServlet extends HttpServlet
             String message = mmJsonToMail.getMessage();
             String username = mmJsonToMail.getUsername();
             DBService.getDBService().sendMessage(new Mails(username, message, DBService.getDBService().getUser(username)));
+            res.setStatus(HttpServletResponse.SC_OK);
         }
         catch (DatabindException e) {throw new RuntimeException(e);}
         catch (StreamReadException e) {throw new RuntimeException(e);}

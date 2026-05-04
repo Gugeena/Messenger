@@ -11,7 +11,7 @@ function send()
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({username: username, message: message})
-    }).then(response => response.json())
+    })
     .then(result => {document.getElementById("username").value = ''; document.getElementById("message").value = ''});
 }
 

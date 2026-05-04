@@ -14,7 +14,7 @@ public class HTMLWriter
                     break;
             }
 
-            String path = "C:\\Users\\lasha\\Downloads\\Servlet-Template (1)\\demo1\\src\\main\\webapp\\" + htmlPageHeader + "Page.html";
+            String path = new File("src\\main\\webapp\\" + htmlPageHeader + "Page.html").getAbsolutePath();
             BufferedReader bufferedReader = new BufferedReader(new FileReader(path));
 
             String line;
