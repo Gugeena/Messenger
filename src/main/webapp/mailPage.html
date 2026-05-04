@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MESSANGER</title>
+</head>
+<body>
+<fieldset>
+  <legend>Send Message</legend>
+  <label for="username">
+    Target User:
+  </label>
+  <input type = "text" id = "username">
+  <br>
+  <label for="message">
+    Message:
+  </label>
+  <input type = "text" id = "message">
+  <br>
+  <br><button onclick="send()">Send</button>
+</fieldset>
+<br>
+<fieldset>
+  <legend>Inbox</legend>
+  <label for="name">
+    Username:
+  </label>
+  <input type = "text" id = "name">
+  <br>
+  <label for="password">
+    Password:
+  </label>
+  <input type = "text" id = "password">
+  <br>
+  <br><button onclick="receive()">Check Inbox</button>
+</fieldset>
+<p id="hidden">Emails will appear here</p>
+<script src = "js/send.js"></script>
+</body>
+</html>
