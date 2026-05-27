@@ -14,7 +14,6 @@ function send()
     })
     .then(result => {document.getElementById("username").value = ''; document.getElementById("message").value = ''});
 }
-
 function receive()
 {
     const username = document.getElementById("name").value;

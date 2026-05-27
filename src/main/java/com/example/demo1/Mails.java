@@ -28,6 +28,7 @@ public class Mails
 
     public Mails()
     {
+
     }
 
     public String getMessage() {

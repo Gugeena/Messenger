@@ -11,6 +11,6 @@ function register()
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({user: username, password: password})
-    })
+    })x1
     .then(() => {document.getElementById("username").value = ''; console.log("tried my best"); document.getElementById("password").value = ''});
 }
